@@ -1,4 +1,4 @@
-const WHATSAPP='201031380253';
+const WHATSAPP='201014977860';
 const accounts = [
   {id:'account01',name:'Account 1',description:'أكونت ممتاز بمستويات عالية وسكنات نادرة.',images:['account01-1.jpg']},
   {id:'account02',name:'Account 2',description:'أكونت قوي مع شخصيات مميزة وسكنات نادرة.',images:['account02-1.jpg']},
@@ -30,57 +30,31 @@ accounts.forEach((acc)=>{
   const btnRequest=document.createElement('button');
   btnRequest.className='btn-whatsapp';
   btnRequest.innerHTML='<i class="fas fa-image"></i> طلب صور';
-  btnRequest.uest.on=li=>=()=>w.ndow.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`مرحبا، أريد صور إضافية لـ .{acc.name,`)}`,'_bl;
+  btnRequest.onclick=()=>window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`مرحبا، أريد صور إضافية لـ ${acc.name}`)}`,'_blank');
 
-  ;
+  const btnBuy=document.createElement('button');
+  btnBuy.className='btn-whatsapp';
+  btnBuy.innerHTML='<i class="fas fa-cart-plus"></i> شراء الآن';
+  btnBuy.onclick=()=>window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`مرحبا، أريد شراء ${acc.name}`)}`,'_blank');
 
-   onst b=nBuy=doc.ment.createElement('but;
-  );
-  b.nBuy.clas=Name='btn-what;
-  ';
-  b.nBuy.inne=HTML='<i class="fas fa-cart-plus"></i> شراء ;
-  ';
-  b.nBuy.on=li=>=()=>w.ndow.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`مرحبا، أريد شراء .{acc.name,`)}`,'_bl;
+  btnGroup.appendChild(btnRequest);
+  btnGroup.appendChild(btnBuy);
 
-  ;
+  content.appendChild(h3);
+  content.appendChild(p);
+  content.appendChild(btnGroup);
 
-  btn.roup.appendChild(btnReq;
-  );
-  btn.roup.appendChild(bt;
-
-  ;
-
-  co.tent.appendChil;
-  );
-  co.tent.appendChi;
-  );
-  co.tent.appendChild(btnG;
-
-  ;
-
- .card.appendChild;
-  );
- .card.appendChild(s;
-  );
- .card.appendChild(con;
-  );
-  account.Grid.appendChild(;
-rd;
-
+  card.appendChild(img);
+  card.appendChild(shine);
+  card.appendChild(content);
+  accountsGrid.appendChild(card);
 });
 
-fun tion sendMessag
-  ).
-  e.preventDefa;
-  );
-   onst=f.rm=e.t;
-  t;
-   onst=name.form.name.;
-  e;
-   onst =mail.form..mail.;
-  e;
-   onst me=sage.form.me.sage.;
-  e;
-  w.ndow.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`مرحبا، عندي استفسار من ${name} (${email}): ${message,`)}`,'_bl;
-k
-                                                                                                                 
+function sendMessage(e){
+  e.preventDefault();
+  const form=e.target;
+  const name=form.name.value;
+  const email=form.email.value;
+  const message=form.message.value;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`مرحبا، عندي استفسار من ${name} (${email}): ${message}`)}`,'_blank');
+}
