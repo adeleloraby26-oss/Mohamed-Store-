@@ -83,27 +83,4 @@ fun tion sendMessag
   e;
   w.ndow.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`مرحبا، عندي استفسار من ${name} (${email}): ${message,`)}`,'_bl;
 k
-const puppeteer = require('puppeteer');
-
-(async () => {
-  const browser = await puppeteer.launch({
-    headless: true,      // بدون واجهة متصفح
-    defaultViewport: {
-      width: 1920,
-      height: 1080
-    }
-  });
-
-  const page = await browser.newPage();
-
-  // 🔴 غيّر المسار لمسار ملف HTML عندك
-  await page.goto(
-    'me.jpg',
-    { waitUntil: 'networkidle0' }
-  );
-
-  // أخذ صورة كاملة للصفحة
-  await page.screenshot({
-    path: 'me.jpg.png', // اسم الصورة
-    fullPage: true
-  });
+                                                                                                                 
